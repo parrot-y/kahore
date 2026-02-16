@@ -36,17 +36,9 @@
     return $(selector).length > 0;
   };
 
-  // Smart preloader initialization
   $(window).on('load', function () {
     preloader();
   });
-
-  // Failsafe: Hide preloader after max 0.8 seconds regardless of load state
-  setTimeout(function () {
-    if (!$('#preloader').hasClass('hide')) {
-      $('#preloader').addClass('hide');
-    }
-  }, 800);
 
   $(function () {
     mainNav();
@@ -79,7 +71,7 @@
   function preloader() {
     setTimeout(function () {
       $('#preloader').addClass('hide');
-    }, 100);
+    }, 1000);
   }
 
   /*--------------------------------------------------------------
@@ -205,7 +197,7 @@
 
         // Slick Active Code
         $slickActive.slick({
-          autoplay: autoPlayVar ? true : false,
+          autoplay: autoPlayVar,
           dots: paginaiton,
           centerPadding: '28%',
           speed: speedVar,
