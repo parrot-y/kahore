@@ -36,9 +36,17 @@
     return $(selector).length > 0;
   };
 
+  // Smart preloader initialization
   $(window).on('load', function () {
     preloader();
   });
+
+  // Failsafe: Hide preloader after max 1.5 seconds regardless of load state
+  setTimeout(function () {
+    if (!$('#preloader').hasClass('hide')) {
+      $('#preloader').addClass('hide');
+    }
+  }, 1500);
 
   $(function () {
     mainNav();
