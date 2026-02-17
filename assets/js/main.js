@@ -71,7 +71,7 @@
   function preloader() {
     setTimeout(function () {
       $('#preloader').addClass('hide');
-    }, 1000);
+    }, 300);
   }
 
   /*--------------------------------------------------------------
