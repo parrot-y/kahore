@@ -3998,8 +3998,8 @@ textarea {
 .cs_gescout_sticky.cs_fixed_sticky {
   top: 0;
   opacity: 1;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
-  box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .cs_gescout_show {
@@ -4149,8 +4149,8 @@ textarea {
     background-color: var(--white-color);
     position: absolute;
     border-top: 2px solid var(--accent-color);
-    -webkit-box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
-    box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
+    -webkit-box-shadow: none;
+    box-shadow: none;
     padding: 10px 0;
     z-index: 100;
     opacity: 0;
