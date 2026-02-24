@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 70" width="360" height="70">
+  <!-- Tyre icon -->
+  <circle cx="35" cy="35" r="28" fill="#E8192C"/>
+  <circle cx="35" cy="35" r="20" fill="#1B1B2F"/>
+  <circle cx="35" cy="35" r="10" fill="#E8192C"/>
+  <circle cx="35" cy="35" r="5" fill="#1B1B2F"/>
+  <!-- Tyre tread marks -->
+  <rect x="32" y="5" width="6" height="7" rx="2" fill="#E8192C"/>
+  <rect x="32" y="58" width="6" height="7" rx="2" fill="#E8192C"/>
+  <rect x="4" y="32" width="7" height="6" rx="2" fill="#E8192C"/>
+  <rect x="59" y="32" width="7" height="6" rx="2" fill="#E8192C"/>
+  <rect x="10" y="12" width="6" height="7" rx="2" fill="#E8192C" transform="rotate(45 13 15)"/>
+  <rect x="52" y="51" width="6" height="7" rx="2" fill="#E8192C" transform="rotate(45 55 55)"/>
+  <rect x="52" y="12" width="6" height="7" rx="2" fill="#E8192C" transform="rotate(-45 55 15)"/>
+  <rect x="10" y="51" width="6" height="7" rx="2" fill="#E8192C" transform="rotate(-45 13 55)"/>
+  <!-- White text for dark footer -->
+  <text x="75" y="24" font-family="Arial Black, Arial, sans-serif" font-size="13" font-weight="900" fill="white" letter-spacing="0.5">JUNCTION KAHORE</text>
+  <text x="75" y="46" font-family="Arial Black, Arial, sans-serif" font-size="18" font-weight="900" fill="#E8192C" letter-spacing="1">TYRES LTD</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Outer ring (tyre) -->
+  <circle cx="60" cy="60" r="56" fill="#E8192C"/>
+  <circle cx="60" cy="60" r="50" fill="#1B1B2F"/>
+  <!-- Tyre tread -->
+  <circle cx="60" cy="60" r="38" fill="none" stroke="#E8192C" stroke-width="3"/>
+  <!-- Hub -->
+  <circle cx="60" cy="60" r="20" fill="#E8192C"/>
+  <circle cx="60" cy="60" r="10" fill="#1B1B2F"/>
+  <!-- Tread nubs -->
+  <rect x="57" y="16" width="6" height="10" rx="2" fill="#E8192C"/>
+  <rect x="57" y="94" width="6" height="10" rx="2" fill="#E8192C"/>
+  <rect x="16" y="57" width="10" height="6" rx="2" fill="#E8192C"/>
+  <rect x="94" y="57" width="10" height="6" rx="2" fill="#E8192C"/>
+  <rect x="25" y="25" width="6" height="10" rx="2" fill="#E8192C" transform="rotate(45 28 30)"/>
+  <rect x="85" y="80" width="6" height="10" rx="2" fill="#E8192C" transform="rotate(45 88 85)"/>
+  <rect x="80" y="25" width="6" height="10" rx="2" fill="#E8192C" transform="rotate(-45 83 30)"/>
+  <rect x="25" y="80" width="6" height="10" rx="2" fill="#E8192C" transform="rotate(-45 28 85)"/>
+  <!-- Text inside circle -->
+  <text x="60" y="50" font-family="Arial Black, Arial, sans-serif" font-size="6.5" font-weight="900" fill="white" text-anchor="middle" letter-spacing="0.2">JUNCTION</text>
+  <text x="60" y="59" font-family="Arial Black, Arial, sans-serif" font-size="7.5" font-weight="900" fill="white" text-anchor="middle" letter-spacing="0.2">KAHORE</text>
+  <text x="60" y="68" font-family="Arial Black, Arial, sans-serif" font-size="6.5" font-weight="900" fill="#E8192C" text-anchor="middle" letter-spacing="0.3">TYRES LTD</text>
+</svg>
