@@ -29,3 +29,6 @@ yarn-error.log*
 # Temporary files
 *.tmp
 .cache/
+
+# Redundant deployment directory
+kahore_deployment/

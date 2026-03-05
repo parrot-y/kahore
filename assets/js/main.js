@@ -41,12 +41,12 @@
     preloader();
   });
 
-  // Failsafe: Hide preloader after max 1.5 seconds regardless of load state
+  // Failsafe: Hide preloader after max 0.8 seconds regardless of load state
   setTimeout(function () {
     if (!$('#preloader').hasClass('hide')) {
       $('#preloader').addClass('hide');
     }
-  }, 1500);
+  }, 800);
 
   $(function () {
     mainNav();
@@ -63,6 +63,7 @@
     counterInit();
     beforeAfterSlider();
     scrollUp();
+    handleContactForm();
     if ($.exists('.wow')) {
       new WOW().init();
     }
@@ -79,7 +80,7 @@
   function preloader() {
     setTimeout(function () {
       $('#preloader').addClass('hide');
-    }, 300);
+    }, 100);
   }
 
   /*--------------------------------------------------------------
@@ -177,6 +178,17 @@
         var speedVar = parseInt($ts.attr('data-speed'), 10);
         // Slider Loop
         var loopVar = Boolean(parseInt($ts.attr('data-loop'), 10));
+
+        // Slider Shuffle (Randomize Slides)
+        var shuffleVar = Boolean(parseInt($ts.attr('data-shuffle'), 10));
+        if (shuffleVar) {
+          var $slides = $slickActive.children().detach();
+          $slides.sort(function () {
+            return 0.5 - Math.random();
+          });
+          $slickActive.append($slides);
+        }
+
         // Slider Center
         var centerVar = Boolean(parseInt($ts.attr('data-center'), 10));
         // Variable Width
@@ -205,7 +217,7 @@
 
         // Slick Active Code
         $slickActive.slick({
-          autoplay: autoPlayVar,
+          autoplay: autoPlayVar ? true : false,
           dots: paginaiton,
           centerPadding: '28%',
           speed: speedVar,
@@ -500,4 +512,40 @@
       $('.cs_scroll_top_btn').removeClass('active');
     }
   }
-})(jQuery); // End of use strict
+  /*--------------------------------------------------------------
+    16. WhatsApp Redirect for Contact Form
+  --------------------------------------------------------------*/
+  function handleContactForm() {
+    if ($.exists('#kahore_contact_form')) {
+      $('#kahore_contact_form').on('submit', function (e) {
+        e.preventDefault();
+        var name = $(this).find('input[name="name"]').val();
+        var email = $(this).find('input[name="email"]').val();
+        var subject = $(this).find('input[name="subject"]').val();
+        var message = $(this).find('textarea[name="message"]').val();
+
+        var whatsappNumber = '254723798196';
+        var text =
+          'Hello Junction Kahore Tyres,\n\n' +
+          'Name: ' +
+          name +
+          '\n' +
+          'Email: ' +
+          email +
+          '\n' +
+          'Subject: ' +
+          subject +
+          '\n' +
+          'Message: ' +
+          message;
+
+        var encodedText = encodeURIComponent(text);
+        var url = 'https://wa.me/' + whatsappNumber + '?text=' + encodedText;
+
+        window.open(url, '_blank');
+      });
+    }
+  }
+
+})(jQuery);
+// End of use strict

@@ -1,8 +1,5 @@
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
+# Netlify configuration for Junction Kahore Tyres Ltd
+# Static site deployment
 
 [[headers]]
   for = "/*"
